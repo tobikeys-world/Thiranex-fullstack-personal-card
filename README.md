@@ -2,6 +2,12 @@
 
 A full-stack personal portfolio website built to showcase my skills, projects, and professional background.
 
+📸 Preview
+
+Desktop View
+
+!["Desktop Preview"](frontend/src/assets/desktop.png)
+
 ## 🚀 Technologies
 
 ### Frontend

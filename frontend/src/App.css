@@ -8,6 +8,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Remove default underline styles from the new anchor layout */
+.nav-link-btn {
+  text-decoration: none;
+  display: inline-block;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #f8fafc;
@@ -24,7 +30,7 @@ section {
   scroll-margin-top: 80px;
 }
 
-/* NAVBAR */
+/* NAVBAR 
 
 .navbar {
   position: sticky;
@@ -43,14 +49,12 @@ section {
   align-items: center;
 }
 
-.logo {
-  font-size: 1.7rem;
-  font-weight: 800;
+.logo img {
+  height: 50px;
+  width: auto;
+  display: block;
 }
 
-.logo span {
-  color: #2563eb;
-}
 
 .nav-links {
   display: flex;
@@ -65,7 +69,123 @@ section {
 
 .nav-links a:hover {
   color: #2563eb;
+}*/
+/* Base Resets for Portfolio Header */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #f5f8ff;
+  /* Light bluish tint matching the background hero theme */
 }
+
+/* Floating Navbar Container */
+.portfolio-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0d1e3d;
+  /* Deep midnight blue base background */
+  padding: 0.75rem 2.5rem;
+  margin: 1.5rem 2rem;
+  /* Handles the top/side gap creating the floating aesthetic */
+  border-radius: 50px;
+  /* Gives the smooth pill/card look */
+  box-shadow: 0 10px 30px rgba(13, 30, 61, 0.15);
+  box-sizing: border-box;
+}
+
+/* Left Brand Formatting */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.navbar-logo-img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navbar-brand-name {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
+/* Center Links Wrapper */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.nav-link-btn {
+  background: none;
+  border: none;
+  color: #a5b4fc;
+  /* Dimmer soft blue text for non-active states */
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.25s ease;
+}
+
+.nav-link-btn:hover {
+  color: #ffffff;
+}
+
+/* Selected Capsule Highlight State */
+.nav-link-btn.active {
+  background-color: #172c54;
+  /* Lighter matching tint inner capsule wrap */
+  color: #ffffff;
+}
+
+/* Right Section CTA Button Styling */
+.navbar-cta {
+  display: flex;
+  align-items: center;
+}
+
+.hire-me-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #1e3a8a;
+  /* Bright slate blue block */
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.hire-me-btn:hover {
+  background-color: #2563eb;
+  /* Vivid hover focus highlighting */
+}
+
+.hire-me-btn:active {
+  transform: scale(0.98);
+}
+
+.btn-icon {
+  color: #38bdf8;
+  /* Soft blue icon color */
+}
+
 
 /* HERO */
 
