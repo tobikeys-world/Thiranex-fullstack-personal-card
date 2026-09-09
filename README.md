@@ -1,12 +1,13 @@
 # Personal Portfolio Website
 
-A full-stack personal portfolio website built to showcase my skills, projects, and professional background.
+A full-stack personal portfolio website built to showcase my skills, projects, and professional background as part of Thiranex internship task.
 
 📸 Preview
 
 Desktop View
 
 !["Desktop Preview"](frontend/src/assets/desktop.png)
+!["Mobile Preview"](frontend/src/assets/Mobile.png)
 
 ## 🚀 Technologies
 
