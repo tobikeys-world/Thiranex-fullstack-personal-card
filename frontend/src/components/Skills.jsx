@@ -9,7 +9,10 @@ const skills = [
     "Express.js",
     "MongoDB",
     "Mongoose",
+    "PostgreSQL",
+    "SQL",
     "REST APIs",
+    "JWT Authentication",
     "Git & GitHub",
 ];
 
@@ -20,12 +23,17 @@ function Skills() {
                 <h2 className="section-title">Skills</h2>
 
                 <p className="section-subtitle">
-                    Technologies and tools I use to build web applications.
+                    Technologies and tools I use to build
+                    modern web applications and database-driven
+                    systems.
                 </p>
 
                 <div className="skills-grid">
                     {skills.map((skill) => (
-                        <div className="skill-card" key={skill}>
+                        <div
+                            className="skill-card"
+                            key={skill}
+                        >
                             {skill}
                         </div>
                     ))}
