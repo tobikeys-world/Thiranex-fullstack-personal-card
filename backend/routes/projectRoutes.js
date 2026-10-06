@@ -6,7 +6,9 @@ const Project = require("../models/project");
 // GET all projects
 router.get("/", async (req, res) => {
     try {
-        const projects = await Project.find().sort({ createdAt: -1 });
+        const projects = await Project.find().sort({
+            createdAt: -1,
+        });
 
         res.status(200).json(projects);
     } catch (error) {
@@ -20,7 +22,44 @@ router.get("/", async (req, res) => {
 // POST a new project
 router.post("/", async (req, res) => {
     try {
-        const project = await Project.create(req.body);
+        const {
+            title,
+            description,
+            technologies,
+            category,
+            image,
+            githubLink,
+            liveLink,
+        } = req.body;
+
+        if (
+            !title ||
+            !description ||
+            !technologies ||
+            !category
+        ) {
+            return res.status(400).json({
+                message:
+                    "Title, description, technologies and category are required",
+            });
+        }
+
+        if (!["frontend", "full-stack"].includes(category)) {
+            return res.status(400).json({
+                message:
+                    "Category must be either frontend or full-stack",
+            });
+        }
+
+        const project = await Project.create({
+            title,
+            description,
+            technologies,
+            category,
+            image,
+            githubLink,
+            liveLink,
+        });
 
         res.status(201).json(project);
     } catch (error) {
