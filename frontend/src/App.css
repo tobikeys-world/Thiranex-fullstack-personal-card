@@ -512,6 +512,7 @@ body {
 
   .about,
   .skills,
+  .certifications,
   .projects,
   .contact {
     padding: 65px 20px;
@@ -675,5 +676,136 @@ body {
 
   .project-card-content {
     padding: 16px;
+  }
+}
+
+/* ============================= */
+/* CERTIFICATIONS */
+/* ============================= */
+
+.certifications {
+  padding: 90px 25px;
+  background: #ffffff;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.certification-card {
+  background: #f8fafc;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+  transition: 0.3s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.08);
+}
+
+.certification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.certification-card h3 {
+  color: #1e293b;
+  font-size: 1.15rem;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+.certification-organization {
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.certification-type {
+  flex-shrink: 0;
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.certification-date {
+  color: #64748b;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.certification-description {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.certification-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.certification-skills span {
+  background: #eef2ff;
+  color: #3730a3;
+  padding: 5px 9px;
+  border-radius: 5px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.certificate-link {
+  display: inline-block;
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: 0.25s ease;
+}
+
+.certificate-link:hover {
+  color: #1d4ed8;
+  transform: translateX(3px);
+}
+
+/* ============================= */
+/* CERTIFICATIONS - MOBILE */
+/* ============================= */
+
+@media (max-width: 600px) {
+  .certifications {
+    padding: 65px 20px;
+  }
+
+  .certification-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .certification-type {
+    align-self: flex-start;
+  }
+
+  .certification-card {
+    padding: 20px;
+  }
+
+  .certification-card h3 {
+    font-size: 1.05rem;
   }
 }
